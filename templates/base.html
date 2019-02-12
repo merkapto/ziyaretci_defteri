@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="/static/style.css" rel="stylesheet" />
+		<title>Structured Journalism</title>
+	</head>
+	<body>
+		<h1>Structured Journalism</h1>
+		<nav>
+      <h2>
+			<a href="/">HOME</a> |
+			{% if user %}
+			<a href="/logout">Logout ({{ user.email }})</a>
+			{% else %}
+			<a href="/login">login</a>
+			{% endif %}
+		</h2>
+		</nav>
+		{% block content %}
+		{% endblock %}
+		<br><br><br><br><br><br><br><br><hr>
+		<footer>This is footer!</footer>
+	</body>
+</html>
